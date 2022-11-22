@@ -3,11 +3,17 @@ window.addEventListener('load', () => {
     const shoeImage = document.querySelector('.shoe-img');
     const firstInfo = document.querySelector('.first-info');
     const secondInfo = document.querySelector('.second-info');
+    const hamburger = document.querySelector('.hamburger');
     let shoeWidth = shoeImage.offsetWidth;
+
 
     responsive();
 
     window.addEventListener('resize', responsive);
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+    });
 
     function responsive() {
         if (firstInfo.offsetWidth / 2 < shoeWidth) {
