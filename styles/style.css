@@ -417,6 +417,10 @@ main #more-info .gallery img:hover {
     height: auto;
     opacity: 0.7;
   }
+  main #landing-page .first-info .image .shoe-img.semi-fit {
+    width: 100%;
+    height: auto;
+  }
   main #below {
     display: none;
   }

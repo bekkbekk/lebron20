@@ -438,6 +438,11 @@ main {
                         width: 100%;
                         height: auto;
                         opacity: 0.7;
+
+                        &.semi-fit {
+                            width: 100%;
+                            height: auto;
+                        }
                     }
                 }
             }
