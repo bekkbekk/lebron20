@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     const firstInfo = document.querySelector('.first-info');
     const secondInfo = document.querySelector('.second-info');
     const hamburger = document.querySelector('.hamburger');
+    const mobNav = document.querySelector('.mobile-nav');
     let shoeWidth = shoeImage.offsetWidth;
 
 
@@ -11,8 +12,14 @@ window.addEventListener('load', () => {
 
     window.addEventListener('resize', responsive);
 
+    window.addEventListener('scroll', () => {
+        hamburger.classList.remove('is-active');
+        mobNav.classList.remove('is-active');
+    });
+
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('is-active');
+        mobNav.classList.toggle('is-active');
     });
 
     function responsive() {

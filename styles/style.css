@@ -114,6 +114,7 @@ header nav .hamburger {
   height: 35px;
   cursor: pointer;
   margin: auto 0;
+  z-index: 1000;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -144,6 +145,41 @@ header nav .hamburger.is-active .bar {
   opacity: 0;
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  z-index: 999;
+  background-color: var(--violet);
+  padding: 30px 15%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+.mobile-nav.is-active {
+  right: 0;
+}
+.mobile-nav ul li {
+  margin: 10px 0;
+}
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+.mobile-nav ul li a:hover {
+  color: var(--mustard);
+  font-weight: 600;
+}
+.mobile-nav ul li.active-page a {
+  color: var(--mustard);
+  font-weight: 600;
+}
+
 main #landing-page {
   background-color: var(--lightest-violet);
   height: 75vh;
@@ -168,6 +204,8 @@ main #landing-page .first-info .details .shop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 main #landing-page .first-info .details .shop .see-more-btn {
   background-color: var(--mustard);
@@ -199,12 +237,6 @@ main #landing-page .first-info .image .shoe-img {
 }
 main #landing-page .first-info .image .shoe-img.semi-fit {
   height: 75vh;
-}
-main #landing-page .first-info .image .shoe-img:hover {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 main #below {
   background-color: var(--lightester-violet);
@@ -383,6 +415,11 @@ main #more-info .gallery img:hover {
   }
   header nav .hamburger {
     display: block;
+  }
+  .mobile-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   main #landing-page {
     height: 100vh;
