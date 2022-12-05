@@ -544,3 +544,14 @@ footer .activity {
             transform: scale(180%);
   }
 }
+@media screen and (max-width: 465px) {
+  footer .full-name {
+    font-size: 26px;
+  }
+  footer .section {
+    font-size: 18px;
+  }
+  footer .activity {
+    font-size: 12px;
+  }
+}
