@@ -429,6 +429,53 @@ main {
 
 }
 
+footer {
+    text-align: center;
+    background-color: #000;
+    padding: 24px 0;
+    color: var(--mustard);
+
+    .icons {
+        display: flex;
+        justify-content: center;
+
+        .icon-container {
+            background-color: var(--mustard);
+            margin: 8px;
+            padding: 5px;
+            border-radius: 50%;
+        
+            transition: 0.4s ease;
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+
+        a .soc-med-icon {
+            width: 30px;
+        }
+    }
+
+    .full-name {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .section {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .activity {
+        font-size: 16px;
+        font-style: italic;
+    }
+}
+
 @media screen and (max-width: 1080px) {
     .hide-mobile {
         display: none;
